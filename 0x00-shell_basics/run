@@ -1,0 +1,6 @@
+#!/bin/bash
+chmod 777 *
+ls
+git add .
+git commit -m "msg"
+git push
