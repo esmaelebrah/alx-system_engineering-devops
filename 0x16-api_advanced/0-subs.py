@@ -22,12 +22,12 @@ def number_of_subscribers(subreddit):
             'Edg/97.0.1072.62'
         ])
     }
-   # res = requests.get(
-    #    '{}/r/{}/about.json'.format(BASE_URL, subreddit),
-     #   headers=api_headers,
-      #  allow_redirects=False
-    #)
-    res = requests.get("https://www.reddit.com/r/programming/about.json")
+    res = requests.get(
+        '{}/r/{}/about.json'.format(BASE_URL, subreddit),
+        headers=api_headers,
+        allow_redirects=False
+    )
+    
     if res.status_code == 200:
         return res.json()['data']['subscribers']
-    return res
+    return 0
